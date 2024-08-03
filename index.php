@@ -6,7 +6,12 @@
     <title>PHP React App</title>
 </head>
 <body>
+    <?php include 'header.php'; ?>
+
     <div id="root"></div>
+
+    <?php include 'footer.php'; ?>
+
     <script src="dist/bundle.js"></script>
 </body>
 </html>
