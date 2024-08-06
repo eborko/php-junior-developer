@@ -7,6 +7,7 @@
 </head>
 <body>
     <div id="product_form"></div>
-    <script src="../../../../dist/AddProduct.bundle.js"></script>
+    <script src="../dist/Footer.bundle.js"></script>
+    <script src="../dist/AddProduct.bundle.js"></script>
 </body>
 </html>
