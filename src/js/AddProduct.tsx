@@ -1,9 +1,9 @@
 import React from "react";
 import {createRoot} from "react-dom/client";
 import Footer from "./shared/footer";
-const AddProduct = () => {
+const AddProduct: React.FC = () => {
     return (
-        <>
+        <div>
             <header>
                 <h1>Product Add</h1>
                 <button>Save</button>
@@ -43,12 +43,16 @@ const AddProduct = () => {
             </div>
 
             <Footer/>
-        </>
+        </div>
     );
 }
 
 export default AddProduct;
 
 const container = document.getElementById('product_form');
-const root = createRoot(container);
-root.render(<AddProduct/>);
+if (container) {
+    const root = createRoot(container);
+    root.render(<AddProduct />);
+} else {
+    console.error("The element with id 'product_form' was not found.");
+}

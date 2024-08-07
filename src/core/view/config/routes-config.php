@@ -4,8 +4,8 @@ $path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 
 // Define the routes
 $routes = [
-    '/' => './src/core/view/pages/list-products.php',
-    '/add-product' => './src/core/view/pages/add-product.php'
+    '/' => './src/core/view/pages/ListProducts.php',
+    '/add-product' => './src/core/view/pages/AddProduct.php'
 ];
 
 // Check if the requested path exists in the routes array

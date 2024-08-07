@@ -1,4 +1,7 @@
-export default function Footer() {
+import React from "react";
+import AddProduct from "../AddProduct";
+
+const Footer: React.FC = () => {
     return (
         <footer className="footer">
             <hr/>
@@ -6,3 +9,5 @@ export default function Footer() {
         </footer>
     );
 }
+
+export default Footer;

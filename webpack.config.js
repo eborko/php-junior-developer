@@ -2,29 +2,41 @@ const path = require('path');
 
 module.exports = {
     entry: {
-        AddProduct: './src/js/add-product.jsx',
-        ListProducts: './src/js/list-products.jsx',
-        Footer: './src/js/shared/footer.jsx',
+        AddProduct: './src/js/AddProduct.tsx',
+        ListProducts: './src/js/ListProducts.tsx',
+        Footer: './src/js/shared/Footer.tsx',
     },
     output: {
-        path: path.resolve(__dirname, 'src/core/view/dist'),
-        filename: '[name].bundle.js'
+        path: path.resolve(__dirname, './src/core/view/dist'),
+        filename: '[name].bundle.js',
     },
     module: {
         rules: [
             {
-                test: /\.(js|jsx)$/,
+                test: /\.tsx?$/,
                 exclude: /node_modules/,
-                use: {
-                    loader: 'babel-loader',
-                    options: {
-                        presets: ['@babel/preset-env', '@babel/preset-react']
-                    }
-                }
-            }
-        ]
+                use: [
+                    {
+                        loader: 'babel-loader',
+                        options: {
+                            presets: [
+                                '@babel/preset-env',
+                                '@babel/preset-react',
+                                '@babel/preset-typescript',
+                            ],
+                        },
+                    },
+                    {
+                        loader: 'ts-loader',
+                        options: {
+                            transpileOnly: true, // Speed up compilation by skipping type checking
+                        },
+                    },
+                ],
+            },
+        ],
     },
     resolve: {
-        extensions: ['.js', '.jsx']
-    }
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+    },
 };
