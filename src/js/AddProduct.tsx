@@ -1,6 +1,6 @@
 import React from "react";
 import {createRoot} from "react-dom/client";
-import Footer from "./shared/footer";
+import MyFooter from "./shared/MyFooter";
 const AddProduct: React.FC = () => {
     return (
         <div>
@@ -42,7 +42,7 @@ const AddProduct: React.FC = () => {
                 </table>
             </div>
 
-            <Footer/>
+            <MyFooter/>
         </div>
     );
 }

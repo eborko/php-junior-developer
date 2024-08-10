@@ -4,7 +4,7 @@ module.exports = {
     entry: {
         AddProduct: './src/js/AddProduct.tsx',
         ListProducts: './src/js/ListProducts.tsx',
-        Footer: './src/js/shared/Footer.tsx',
+        MyFooter: './src/js/shared/MyFooter.tsx',
     },
     output: {
         path: path.resolve(__dirname, './src/core/view/dist'),
